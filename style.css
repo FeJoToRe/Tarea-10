@@ -27,20 +27,20 @@ footer {
     max-width: 1040px;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: clamp(22px, 2.5vw, 28px);
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 42px;
+    gap: clamp(24px, 4vw, 42px);
     flex-wrap: wrap;
 }
 
 .listings {
     display: flex;
-    gap: 52px;
+    gap: clamp(26px, 4.5vw, 52px);
     flex-wrap: wrap;
     flex: 1 1 420px;
 }
@@ -72,6 +72,7 @@ footer {
 
 .newsletter {
     flex: 1 1 340px;
+    min-width: 260px;
     max-width: 460px;
     display: flex;
     flex-direction: column;
@@ -92,15 +93,15 @@ footer {
 .subscribe-form {
     margin-top: 4px;
     display: flex;
-    gap: 0;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .subscribe-form input {
-    flex: 1;
+    flex: 1 1 230px;
     height: 44px;
     border: 1px solid #2f3946;
-    border-right: 0;
-    border-radius: 8px 0 0 8px;
+    border-radius: 8px;
     background-color: #1a212c;
     color: #edf3fb;
     padding: 0 14px;
@@ -113,9 +114,10 @@ footer {
 }
 
 .subscribe-form button {
+    flex: 0 0 auto;
     height: 44px;
     border: 1px solid #2a73f5;
-    border-radius: 0 8px 8px 0;
+    border-radius: 8px;
     background-color: #2a73f5;
     color: #f5f9ff;
     padding: 0 18px;
@@ -142,6 +144,10 @@ hr {
 }
 
 .footer-bottom p {
+    flex: 1 1 250px;
+}
+
+.footer-bottom p {
     color: #a8b4c4;
     font-size: 0.9rem;
 }
@@ -150,6 +156,7 @@ hr {
     display: flex;
     align-items: center;
     gap: 16px;
+    margin-left: auto;
 }
 
 .socials a {
@@ -161,42 +168,4 @@ hr {
 
 .socials a:hover {
     color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .footer {
-        gap: 22px;
-    }
-
-    .footer-top {
-        gap: 26px;
-    }
-
-    .listings {
-        gap: 28px;
-    }
-
-    .newsletter {
-        max-width: none;
-    }
-
-    .subscribe-form {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .subscribe-form input {
-        border-right: 1px solid #2f3946;
-        border-radius: 8px;
-    }
-
-    .subscribe-form button {
-        border-radius: 8px;
-        width: 100%;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
